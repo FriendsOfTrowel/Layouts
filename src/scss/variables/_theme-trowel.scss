@@ -1,12 +1,23 @@
-$layout--var-1: (
-  'default': 'var-1--default',
-  '-modifier': 'var-1--modifier',
-  '@sm': 'var-1--breakpoint',
-  '<a': (
-    'default': 'var-1--tag',
-    ':hover': 'var-1--a:hover',
+$container--enable: true !default; // not a trowel variable
+$container--padding-x: 1rem !default;
+$container--width: (
+  'default': (
+    '@sm': 540px,
+    '@md': 720px,
   ),
-  ':hover': 'var-1--hover',
+  '-fluid': 100%,
 ) !default;
 
-$layout--var-2: 'var-2' !default;
+$grid--enable: true !default; // not a trowel variable
+$grid--gutter: $container--padding-x !default;
+$grid--columns: 12 !default; // not a trowel variable
+
+$flexgrid--enable: true !default; // not a trowel variable
+$flexgrid--gutter: 0.5em !default;
+$flexgrid--flex-wrap: wrap !default;
+$flexgrid--align-items: null !default;
+$flexgrid--justify-content: null !default;
+
+$flexcol--flex-grow: 1 !default;
+$flexcol--flex-shrink: 0 !default;
+$flexcol--flex-basis: 10em !default;

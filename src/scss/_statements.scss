@@ -3,16 +3,106 @@
  */
 
 @mixin mixin-dispatcher($value, $flags, $mixin) {
-  @if $mixin == 'layouts--mixin-example' {
-    @include layouts--mixin-example($value, $flags);
+  @if $mixin == 'layouts--padding-x' {
+    @include layouts--padding-x($value, $flags);
+  } @elseif $mixin == 'layouts--grid-gutter-row' {
+    @include layouts--grid-gutter-row($value, $flags);
+  } @elseif $mixin == 'layouts--grid-gutter-col' {
+    @include layouts--grid-gutter-col($value, $flags);
+  } @elseif $mixin == 'layouts--flexgrid-gutter-row' {
+    @include layouts--flexgrid-gutter-row($value, $flags);
   }
 };
 
-$selector: selector--constructor($layout--synthax, 'layout');
 
-@include selector($selector) {
-  @include declaration('-include-layouts--mixin-example', $layout--var-1);
-  @include declaration('content', $layout--var-2);
+/**
+ * container
+ * ---------
+ */
 
-  @include block-generation;
+@if $container--enable {
+  $container--selector: selector--constructor($layout--synthax, 'container');
+
+  @include selector($container--selector) {
+    @include declaration('-include-layouts--padding-x', $container--padding-x);
+    @include declaration(box-sizing, border-box);
+    @include declaration(margin-left, auto);
+    @include declaration(margin-right, auto);
+    @include declaration(max-width, 100%);
+    @include declaration(width, $container--width);
+
+    @include block-generation($container--selector);
+    @include trowel-clearfix($container--selector);
+  }
+}
+
+/**
+ * grid
+ * ----
+ */
+
+@if $grid--enable {
+  $grid--selector: selector--constructor($layout--synthax, 'grid');
+
+  @include selector($grid--selector) {
+    @include declaration('-include-layouts--grid-gutter-row', $grid--gutter);
+
+    @include block-generation($grid--selector);
+    @include trowel-clearfix($grid--selector);
+  }
+
+
+  $grid-col--selector: selector--constructor($layout--synthax, 'col');
+
+  @include selector($grid-col--selector) {
+    @include declaration(float, left);
+    @include declaration(position, relative);
+    @include declaration(min-height, 1px);
+    @include declaration(box-sizing, border-box);
+    @include declaration('-include-layouts--grid-gutter-col', $grid--gutter);
+
+    @include block-generation($grid-col--selector);
+  }
+
+  @each $breakoint, $fork in $breakpoints {
+    @for $size from 1 through $grid--columns {
+      $grid-col-item--selector: selector--set-modifier($grid-col--selector, '#{$breakoint}-#{$size}');
+
+      @include selector($grid-col-item--selector) {
+        @include declaration(width, percentage($size / $grid--columns), ('@#{$breakoint}',));
+        @include block-generation($grid-col-item--selector);
+      }
+    }
+  }
+}
+
+/**
+ * flex-grid
+ * ---------
+ */
+
+@if $flexgrid--enable {
+  $flexgrid--selector: selector--constructor($layout--synthax, 'flex-grid');
+
+  @include selector($flexgrid--selector) {
+    @include declaration(display, flex);
+    @include declaration(flex-wrap, $flexgrid--flex-wrap);
+    @include declaration(justify-content, $flexgrid--justify-content);
+    @include declaration(align-items, $flexgrid--align-items);
+    @include declaration('-include-layouts--flexgrid-gutter-row', $flexgrid--gutter);
+
+    @include block-generation($flexgrid--selector);
+  }
+
+
+  $flexgrid-col--selector: selector--constructor($layout--synthax, 'flex-col');
+
+  @include selector($flexgrid-col--selector) {
+    @include declaration(flex-grow, $flexcol--flex-grow);
+    @include declaration(flex-shrink, $flexcol--flex-shrink);
+    @include declaration(flex-basis, $flexcol--flex-basis);
+    @include declaration(margin, $flexgrid--gutter);
+
+    @include block-generation($flexgrid-col--selector);
+  }
 }

@@ -1,0 +1,21 @@
+@mixin layouts--grid-gutter-row($value, $flags) {
+  $is-px-unit: unit($value) == 'px';
+  $margin-left: if($is-px-unit, ceil(-$value / 2), (-$value / 2));
+  $margin-right: if($is-px-unit, floor(-$value / 2), (-$value / 2));
+
+  @include declaration('margin-left', $margin-left, $flags);
+  @include declaration('margin-right', $margin-right, $flags);
+}
+
+@mixin layouts--grid-gutter-col($value, $flags) {
+  $is-px-unit: unit($value) == 'px';
+  $padding-left: if($is-px-unit, ceil($value / 2), ($value / 2));
+  $padding-right: if($is-px-unit, floor($value / 2), ($value / 2));
+
+  @include declaration('padding-left', $padding-left, $flags);
+  @include declaration('padding-right', $padding-right, $flags);
+}
+
+@mixin layouts--flexgrid-gutter-row($value, $flags) {
+  @include declaration('margin', -$value, $flags);
+}

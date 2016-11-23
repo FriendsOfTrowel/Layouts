@@ -1,0 +1,11 @@
+@mixin trowel-clearfix($selector) {
+  $selector-after: selector--set-pseudo-element($selector, 'after');
+
+  @include selector($selector-after) {
+    @include declaration('content', '');
+    @include declaration('display', table);
+    @include declaration('clear', both);
+
+    @include block-generation($selector-after);
+  }
+}

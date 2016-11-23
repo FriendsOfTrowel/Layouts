@@ -1,0 +1,3 @@
+@mixin layouts--padding-x($value, $flags) {
+  @include declaration('padding', 0 $value, $flags);
+}
