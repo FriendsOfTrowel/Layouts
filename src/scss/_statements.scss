@@ -1,18 +1,18 @@
 /**
- * Layouts
+ * layouts
  */
 
 @mixin mixin-dispatcher($value, $flags, $mixin) {
-  @if $mixin == 'Layouts--mixin-example' {
-    @include Layouts--mixin-example($value, $flags);
+  @if $mixin == 'layouts--mixin-example' {
+    @include layouts--mixin-example($value, $flags);
   }
 };
 
-$selector: selector--constructor($Layout--synthax, 'Layout');
+$selector: selector--constructor($layout--synthax, 'layout');
 
 @include selector($selector) {
-  @include declaration('-include-Layouts--mixin-example', $Layout--var-1);
-  @include declaration('content', $Layout--var-2);
+  @include declaration('-include-layouts--mixin-example', $layout--var-1);
+  @include declaration('content', $layout--var-2);
 
   @include block-generation;
 }
