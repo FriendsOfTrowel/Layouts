@@ -34,7 +34,7 @@ The main scss file to include to your main `.scss` file is located at the `./src
 @import './path/to/dependencies/trowel-core/src/trowel';
 
 // Trowel Components Layouts
-@import './path/to/dependencies/src/scss/Layouts.scss';
+@import './path/to/dependencies/src/scss/layouts';
 ```
 
 
