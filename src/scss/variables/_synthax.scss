@@ -1,0 +1,9 @@
+$Layout--prefix: 'c' !default;
+$Layout--synthax: (
+  'prefix': $Layout--prefix,
+  'separator': (
+    'prefix': '-',
+    'element': '__',
+    'modifier': '--',
+  ),
+);

@@ -1,0 +1,12 @@
+{
+  "stylevendors": [
+    "@bower/trowel-Layouts/src/scss/Layouts.scss"
+  ],
+  
+  "stylegui": [
+    "@bower/trowel-Layouts//Layouts-gui.scss"
+  ],
+  "templategui": [
+    "@bower/trowel-Layouts//Layouts-gui.html.twig"
+  ]
+}

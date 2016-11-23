@@ -1,0 +1,37 @@
+{
+  "name": "friendsOfTrowel-Layouts-component",
+  "homepage": "https://github.com/FriendsOfTrowel/Layouts",
+  "authors": [
+    "Loïc Goyet <loic@troopers.email>"
+  ],
+  "description": "The official Trowel Component for Layouts",
+  "main": [
+    "src/scss/Layouts.scss",
+    "injector.json"
+  ],
+  "keywords": [
+    "scss",
+    "css",
+    "trowel",
+    "trowel-Layouts",
+    "Layouts"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    ".bowerrc",
+    ".gitignore",
+    "gulpfile.js",
+    "package.json",
+    "sache.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FriendsOfTrowel/Layouts.git"
+  },
+  "dependencies": {
+    "trowel-core": "^1.2.3"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "friendsOfTrowel-Layouts-component",
+  "version": "0.0.0",
+  "description": "The official Trowel Component for Layouts",
+  "scripts": {
+    "test": "gulp test",
+    "start": "gulp test_watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FriendsOfTrowel/Layouts.git"
+  },
+  "author": "Loïc Goyet <loic@troopers.email>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FriendsOfTrowel/Layouts/issues"
+  },
+  "files": [
+    "src/scss/Layouts.scss",
+    "injector.json"
+  ],
+  "keywords": [
+    "scss",
+    "css",
+    "trowel",
+    "trowel-Layouts",
+    "Layouts"
+  ],
+  "homepage": "https://github.com/FriendsOfTrowel/Layouts#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "run-sequence": "^1.2.2"
+  }
+}
