@@ -1,5 +1,5 @@
 {
-  "name": "friendsOfTrowel-Layouts-component",
+  "name": "trowel-layouts",
   "homepage": "https://github.com/FriendsOfTrowel/Layouts",
   "authors": [
     "Loïc Goyet <loic@troopers.email>"
@@ -32,6 +32,6 @@
     "url": "git+https://github.com/FriendsOfTrowel/Layouts.git"
   },
   "dependencies": {
-    "trowel-core": "^1.2.3"
+    "trowel-core": "^2.0.0"
   }
 }

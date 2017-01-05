@@ -1,6 +1,6 @@
 {
-  "name": "friendsOfTrowel-Layouts-component",
-  "version": "0.0.0",
+  "name": "trowel-layouts",
+  "version": "1.0.0",
   "description": "The official Trowel Component for Layouts",
   "scripts": {
     "test": "gulp test",
@@ -15,10 +15,6 @@
   "bugs": {
     "url": "https://github.com/FriendsOfTrowel/Layouts/issues"
   },
-  "files": [
-    "src/scss/Layouts.scss",
-    "injector.json"
-  ],
   "keywords": [
     "scss",
     "css",
@@ -40,5 +36,8 @@
     "gulp-size": "^2.1.0",
     "gulp-sourcemaps": "^1.9.1",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "trowel-core": "^2.0.0"
   }
 }

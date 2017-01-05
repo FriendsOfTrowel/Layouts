@@ -9,17 +9,17 @@ Layouts is a *Trowel Component*, please refer to the [Trowel doc](http://trowel.
 
 ## Getting Started
 ### Download
-You can easily install trowel-Layouts by using npm, Yarn or Bower
+You can easily install trowel-layouts by using NPM or Bower with the name `trowel-layouts` (previously `friendsOfTrowel-Layouts-component`)
 
 ```bash
 # With bower
-$ bower install friendsOfTrowel-Layouts-component
+$ bower install trowel-layouts
 
 # With npm
-$ npm install friendsOfTrowel-Layouts-component
+$ npm install trowel-layouts
 
 # With yarn
-$ yarn add friendsOfTrowel-Layouts-component
+$ yarn add trowel-layouts
 ```
 
 You can also download a zip archive [right here](https://github.com/FriendsOfTrowel/Layouts/archive/master.zip).
@@ -30,11 +30,10 @@ The main scss file to include to your main `.scss` file is located at the `./src
 
 ```
 // Trowel Dependencies
-@import './path/to/dependencies/sassy-maps/sass/sassy-maps';
 @import './path/to/dependencies/trowel-core/src/trowel';
 
 // Trowel Components Layouts
-@import './path/to/dependencies/src/scss/layouts';
+@import './path/to/dependencies/trowel-layouts/src/scss/layouts';
 ```
 
 
