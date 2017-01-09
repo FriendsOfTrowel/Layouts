@@ -64,7 +64,7 @@
     @include block-generation($grid-col--selector);
   }
 
-  @each $breakoint, $fork in $breakpoints {
+  @each $breakoint, $fork in map-get($trowel-config, breakpoints) {
     @for $size from 1 through $grid--columns {
       $grid-col-item--selector: selector--set-modifier($grid-col--selector, '#{$breakoint}-#{$size}');
 
