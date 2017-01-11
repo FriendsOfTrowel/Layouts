@@ -1,9 +1,1 @@
-$layout--prefix: 'l' !default;
-$layout--synthax: (
-  'prefix': $layout--prefix,
-  'separator': (
-    'prefix': '-',
-    'element': '__',
-    'modifier': '--',
-  ),
-);
+$layout--synthax: null !default;
