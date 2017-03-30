@@ -5,13 +5,10 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 gulp.task('template_test', function() {
-
   return gulp.src('test/src/index.html')
     .pipe($.prettify({ indent_size: 2 }))
     .pipe(gulp.dest('test/dest'));
-
 });
-
 
 
 AUTOPREFIXER_BROWSERS = [
@@ -25,6 +22,7 @@ AUTOPREFIXER_BROWSERS = [
   'android >= 4.4',
   'bb >= 10'
 ];
+
 var report_error = function(error) {
   $.notify({
     title: 'An error occured with a Gulp task',
@@ -62,5 +60,4 @@ gulp.task('test_watch', ['test'], function() {
 
   gulp.watch(['src/scss/**/*.scss', 'test/src/**/*.scss'], ['scss_test', reload]);
   gulp.watch(['test/src/**/*.html'], ['template_test', reload]);
-  
 });
