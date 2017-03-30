@@ -18,6 +18,9 @@ $flexgrid--flex-wrap: wrap !default;
 $flexgrid--align-items: null !default;
 $flexgrid--justify-content: null !default;
 
-$flexcol--flex-grow: 1 !default;
-$flexcol--flex-shrink: 0 !default;
-$flexcol--flex-basis: 10em !default;
+$flexcol--flex-grow: (
+  'default': null,
+  '~grow-1': 1,
+) !default;
+$flexcol--flex-shrink: null !default;
+$flexcol--flex-basis: null !default;

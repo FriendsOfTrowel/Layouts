@@ -32,6 +32,6 @@
     "url": "git+https://github.com/FriendsOfTrowel/Layouts.git"
   },
   "dependencies": {
-    "trowel-core": "^3.2.0"
+    "trowel-core": "^4.0.2"
   }
 }
